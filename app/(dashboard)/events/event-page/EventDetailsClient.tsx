@@ -21,7 +21,6 @@ import { Separator } from "@/components/ui/separator";
 import { Clock, DollarSign, Users, BarChart2, Loader2 } from "lucide-react";
 import { formatDistanceToNowStrict, parseISO, isValid } from "date-fns";
 import { MarketDetailTabs } from "@/components/market/MarketDetailTabs";
-import { ResolutionPreview } from "@/components/market/ResolutionPreview";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import {
   Drawer,
@@ -466,12 +465,6 @@ export default function EventDetailsClient() {
           <Badge variant="outline">{eventData.category}</Badge>
         </div>
         <p className="text-muted-foreground">{eventData.description}</p>
-        <div className="mt-4 flex items-center gap-3">
-          <span className="text-xs text-muted-foreground whitespace-nowrap">
-            Resolution Preview
-          </span>
-          <ResolutionPreview />
-        </div>
       </div>
 
       <Separator className="my-6" />
